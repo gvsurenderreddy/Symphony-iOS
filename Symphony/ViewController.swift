@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         self.title = "Symphony"
         
         createTestSymphony()
-        
+        retrieveLiveMusicEvents()
     }
     
     
@@ -35,10 +35,20 @@ class ViewController: UIViewController {
         var symphony2 = Symphony()
         symphony2.eventName = "Hello"
         
-        
         self.symphony = [symphony1, symphony2]
         
     }
+    
+    
+    func retrieveLiveMusicEvents() {
+        
+        let eventAPIController = EventAPIController(delegate: self)
+        eventAPIController.retrieveEvents()
+        
+    }
+    
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -102,6 +112,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 160
+    }
+}
+
+extension ViewController: EventAPIControllerDelegate {
+    
+    func didReceiveConnectionErrorRetrievingEvents(connectionError: NSError) {
+        
+        print("connectionErrorVC when retrieve live music events \(connectionError)")
+        
+    }
+    
+    func didRetrieveEvents(liveMusicEvent: NSDictionary) {
+        print("didRetrieveEvents in VC \n\n \(liveMusicEvent)")
     }
 }
 
