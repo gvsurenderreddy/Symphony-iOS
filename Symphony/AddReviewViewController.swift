@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol AddReviewDelegate {
+    func addReview(review: String)
+}
+
 class AddReviewViewController: UIViewController {
+    
+    var delegate: AddReviewDelegate?
 
     @IBOutlet weak var dismissButton: UIButton! {
         didSet {
@@ -41,7 +47,8 @@ class AddReviewViewController: UIViewController {
 
     //MARK: Done Button
     @IBAction func onDoneButtonPressed(sender: AnyObject) {
-        print("done")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.addReview(self.reviewTextView.text)
     }
 
     //MARK: Dismiss button

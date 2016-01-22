@@ -21,7 +21,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Details"
+        self.title = self.symphony?.eventName
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
