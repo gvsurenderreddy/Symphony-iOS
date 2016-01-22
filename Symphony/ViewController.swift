@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         if segue.identifier == "ToDetailsVC" {
             
-            let detailsVC = DetailsViewController()
+            _ = DetailsViewController()
             
         }
     }
@@ -48,6 +48,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.performSegueWithIdentifier("ToDetailsVC", sender: nil)
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
 }
 
