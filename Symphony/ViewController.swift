@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var liveMusicTableView: UITableView!
+    let symphony = [Symphony]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
