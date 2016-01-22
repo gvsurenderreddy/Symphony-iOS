@@ -10,9 +10,16 @@ import Foundation
 
 struct Symphony {
     
-    let venueName: String
-    let venueDescription: String
-    let reviews: [String]
-    let imageOfVenue: String
+    var eventName: String
+    var venueDescription: String
+    var reviews: [String]
+    var imageOfVenue: String
+    
+    init() {
+        eventName = ""
+        venueDescription = ""
+        reviews = [""]
+        imageOfVenue = ""
+    }
     
 }

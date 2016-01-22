@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    
+    var symphony: Symphony?
 
     @IBOutlet weak var detailsTableView: UITableView! {
         didSet {
@@ -42,12 +44,16 @@ extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCellWithIdentifier("DetailsFirstCellID")!
+            cell.textLabel?.text = self.symphony!.eventName
+            
             return cell
         } else if indexPath.row == 1 {
+            
             let secondCell = tableView.dequeueReusableCellWithIdentifier("DetailsSecondCellID")!
             secondCell.textLabel?.text = "Second Cell"
             secondCell.detailTextLabel?.text = "Second cell detail text label"
             return secondCell
+            
         } else {
 
             let thirdCell = tableView.dequeueReusableCellWithIdentifier("DetailsThirdCellID")!
