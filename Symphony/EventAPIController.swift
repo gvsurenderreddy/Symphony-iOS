@@ -25,12 +25,15 @@ class EventAPIController: NSObject {
     
     func retrieveEvents() {
         
-        let urlString = ""
+        let urlString = "https://mysterious-spire-77202.herokuapp.com/api/venues"
         let url = NSURL(string: urlString)
-        let urlSession = NSURLSession.sharedSession()
+        let urlRequest = NSMutableURLRequest(URL: url!)
+        urlRequest.HTTPMethod = "GET"
+        urlRequest.setValue("application/vnd.api+json", forHTTPHeaderField: "Accept")
         
-        if let validURL = url {
-            let urlSessionTask = urlSession.dataTaskWithURL(validURL, completionHandler: { (data, urlResponse, urlSessionError) -> Void in
+        let urlSession = NSURLSession.sharedSession()
+
+        let urlSessionTask = urlSession.dataTaskWithRequest(urlRequest, completionHandler: { (data, urlResponse, urlSessionError) -> Void in
                 
                 if urlSessionError != nil {
                     
@@ -54,5 +57,4 @@ class EventAPIController: NSObject {
             })
             urlSessionTask.resume()
         }
-    }
 }
