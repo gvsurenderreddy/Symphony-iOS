@@ -85,7 +85,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let darkOverlayBackgroundView = UIView(frame: cell.bounds)
         darkOverlayBackgroundView.backgroundColor = UIColor.blackColor()
-        darkOverlayBackgroundView.alpha = 0.5
+        darkOverlayBackgroundView.alpha = 0.6
         
         cell.backgroundView?.addSubview(darkOverlayBackgroundView)
         cell.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill

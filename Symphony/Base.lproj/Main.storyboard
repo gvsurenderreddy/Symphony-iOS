@@ -185,10 +185,81 @@
                             <constraint firstItem="uoA-2N-AdB" firstAttribute="leading" secondItem="zvX-Uj-9FR" secondAttribute="leading" id="yra-Hq-FSt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="l4c-wB-E0Q" kind="presentation" identifier="ToAddReviewVC" id="uwG-us-he0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhh-W9-gRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2165" y="305"/>
+        </scene>
+        <!--Add Review View Controller-->
+        <scene sceneID="RgK-my-edr">
+            <objects>
+                <viewController id="l4c-wB-E0Q" customClass="AddReviewViewController" customModule="Symphony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2VA-X3-sZX"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Cg-uh-Vwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fW8-5A-SG7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gph-FU-bnQ">
+                                <rect key="frame" x="11" y="28" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Qzl-3g-70A"/>
+                                    <constraint firstAttribute="height" constant="50" id="lI9-YG-EzH"/>
+                                </constraints>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="onDismissButtonPressed:" destination="l4c-wB-E0Q" eventType="touchUpInside" id="Cfh-JC-7Lp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g0q-Pd-LW1">
+                                <rect key="frame" x="20" y="115" width="560" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="9Ar-vZ-FpV"/>
+                                    <constraint firstAttribute="width" constant="560" id="sKi-96-bb3"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-Et-tnd">
+                                <rect key="frame" x="530" y="28" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8ec-9E-lql"/>
+                                    <constraint firstAttribute="height" constant="50" id="QgB-rT-uDG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onDoneButtonPressed:" destination="l4c-wB-E0Q" eventType="touchUpInside" id="7Ni-Mz-c1J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g0q-Pd-LW1" firstAttribute="top" secondItem="Gph-FU-bnQ" secondAttribute="bottom" constant="37" id="2z3-9x-ak6"/>
+                            <constraint firstAttribute="trailing" secondItem="qmy-Et-tnd" secondAttribute="trailing" constant="20" id="7ib-cO-Qi2"/>
+                            <constraint firstItem="Gph-FU-bnQ" firstAttribute="top" secondItem="2VA-X3-sZX" secondAttribute="bottom" constant="8" id="fhW-1Q-qXo"/>
+                            <constraint firstItem="g0q-Pd-LW1" firstAttribute="leading" secondItem="fW8-5A-SG7" secondAttribute="leading" constant="20" id="hcf-i1-Ibn"/>
+                            <constraint firstAttribute="trailing" secondItem="g0q-Pd-LW1" secondAttribute="trailing" constant="20" id="nzW-Ns-3Ze"/>
+                            <constraint firstItem="Gph-FU-bnQ" firstAttribute="leading" secondItem="fW8-5A-SG7" secondAttribute="leading" constant="11" id="oz5-4l-JjP"/>
+                            <constraint firstItem="5Cg-uh-Vwf" firstAttribute="top" secondItem="g0q-Pd-LW1" secondAttribute="bottom" constant="261" id="veb-TW-NOg"/>
+                            <constraint firstItem="qmy-Et-tnd" firstAttribute="top" secondItem="2VA-X3-sZX" secondAttribute="bottom" constant="8" id="zWp-Ga-dW3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="Gph-FU-bnQ" id="bY3-tw-k5H"/>
+                        <outlet property="doneButton" destination="qmy-Et-tnd" id="fKa-vU-dRo"/>
+                        <outlet property="reviewTextView" destination="g0q-Pd-LW1" id="C7e-JA-BuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MqN-K2-gHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5B9-dH-Shj">

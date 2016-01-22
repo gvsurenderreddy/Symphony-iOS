@@ -20,6 +20,7 @@
 		69D209CD1C51EBB10049B347 /* ThirdDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209CC1C51EBB10049B347 /* ThirdDetailTableViewCell.swift */; };
 		69D209D01C51F1EA0049B347 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209CF1C51F1EA0049B347 /* ReviewsViewController.swift */; };
 		69D209D31C51F3750049B347 /* Symphony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209D21C51F3750049B347 /* Symphony.swift */; };
+		69D209D51C5216D60049B347 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209D41C5216D60049B347 /* AddReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		69D209CC1C51EBB10049B347 /* ThirdDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdDetailTableViewCell.swift; sourceTree = "<group>"; };
 		69D209CF1C51F1EA0049B347 /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		69D209D21C51F3750049B347 /* Symphony.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symphony.swift; sourceTree = "<group>"; };
+		69D209D41C5216D60049B347 /* AddReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				69D2099A1C51E4480049B347 /* ViewController.swift */,
 				69D209C61C51E7090049B347 /* DetailsViewController.swift */,
 				69D209CF1C51F1EA0049B347 /* ReviewsViewController.swift */,
+				69D209D41C5216D60049B347 /* AddReviewViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				69D209D31C51F3750049B347 /* Symphony.swift in Sources */,
 				69D209CD1C51EBB10049B347 /* ThirdDetailTableViewCell.swift in Sources */,
 				69D209CB1C51EBA80049B347 /* SecondDetailTableViewCell.swift in Sources */,
+				69D209D51C5216D60049B347 /* AddReviewViewController.swift in Sources */,
 				69D2099B1C51E4480049B347 /* ViewController.swift in Sources */,
 				69D209991C51E4480049B347 /* AppDelegate.swift in Sources */,
 				69D209D01C51F1EA0049B347 /* ReviewsViewController.swift in Sources */,

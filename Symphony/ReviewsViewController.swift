@@ -27,6 +27,6 @@ class ReviewsViewController: UIViewController {
     }
     
     func onAddReviewButtonPressed() {
-        print("Hello")
+        self.performSegueWithIdentifier("ToAddReviewVC", sender: nil)
     }
 }
