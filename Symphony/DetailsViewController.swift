@@ -14,7 +14,7 @@ class DetailsViewController: UIViewController {
 
     @IBOutlet weak var detailsTableView: UITableView! {
         didSet {
-            detailsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
+            detailsTableView.tableFooterView = UIView()
         }
     }
     
@@ -40,34 +40,42 @@ extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell!
+    
         if indexPath.row == 0 {
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("DetailsFirstCellID")!
+            cell = tableView.dequeueReusableCellWithIdentifier("DetailsFirstCellID")!
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.textLabel?.text = self.symphony!.eventName
+            cell.textLabel?.font = UIFont.systemFontOfSize(20)
+            
+            cell.detailTextLabel?.text = "Address: \(self.symphony!.address) \n\nPhone: \(self.symphony!.phone)"
+            cell.detailTextLabel?.numberOfLines = 0
+            cell.detailTextLabel?.font = UIFont.systemFontOfSize(16)
             
             return cell
             
         } else if indexPath.row == 1 {
             
-            let secondCell = tableView.dequeueReusableCellWithIdentifier("DetailsSecondCellID")!
-            secondCell.textLabel?.text = "Description"
-            secondCell.textLabel?.font = UIFont.systemFontOfSize(20)
-            secondCell.textLabel?.numberOfLines = 0
-            secondCell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell = tableView.dequeueReusableCellWithIdentifier("DetailsSecondCellID")!
+            cell.textLabel?.text = "Description"
+            cell.textLabel?.font = UIFont.systemFontOfSize(20)
+            cell.textLabel?.numberOfLines = 0
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             
-            secondCell.detailTextLabel?.text = "Second cell detail text label lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum abc"
-            secondCell.detailTextLabel?.numberOfLines = 0
-            secondCell.detailTextLabel?.font = UIFont.systemFontOfSize(14)
-            return secondCell
+            cell.detailTextLabel?.text = "Summary: \(self.symphony!.details)"
+            cell.detailTextLabel?.numberOfLines = 0
+            cell.detailTextLabel?.font = UIFont.systemFontOfSize(16)
+            return cell
             
         } else {
 
-            let thirdCell = tableView.dequeueReusableCellWithIdentifier("DetailsThirdCellID")!
-            thirdCell.textLabel?.text = "Reviews"
-            thirdCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            thirdCell.selectionStyle = UITableViewCellSelectionStyle.None
-            return thirdCell
+            cell = tableView.dequeueReusableCellWithIdentifier("DetailsThirdCellID")!
+            cell.textLabel?.text = "Reviews"
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
         }
     }
     
@@ -76,7 +84,7 @@ extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             return 120
         } else if indexPath.row == 1 {
-            return 180
+            return 80
         } else {
             return 50
         }

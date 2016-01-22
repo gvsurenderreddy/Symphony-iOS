@@ -12,14 +12,18 @@ struct Symphony {
     
     var eventName: String
     var venueDescription: String
-    var reviews: [String]
     var imageOfVenue: String
+    var details: String
+    var address: String
+    var phone: String
     
     init() {
         eventName = ""
         venueDescription = ""
-        reviews = [""]
         imageOfVenue = ""
+        details = ""
+        address = ""
+        phone = ""
     }
     
 }
