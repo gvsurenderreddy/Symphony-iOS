@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Symphony"
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         if segue.identifier == "ToDetailsVC" {
             
             _ = DetailsViewController()
-            
+
         }
     }
     
