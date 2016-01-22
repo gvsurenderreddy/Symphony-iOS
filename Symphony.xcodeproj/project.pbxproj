@@ -14,6 +14,7 @@
 		69D209A31C51E4480049B347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D209A11C51E4480049B347 /* LaunchScreen.storyboard */; };
 		69D209AE1C51E4480049B347 /* SymphonyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209AD1C51E4480049B347 /* SymphonyTests.swift */; };
 		69D209B91C51E4480049B347 /* SymphonyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209B81C51E4480049B347 /* SymphonyUITests.swift */; };
+		69D209C71C51E7090049B347 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209C61C51E7090049B347 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		69D209B41C51E4480049B347 /* SymphonyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymphonyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D209B81C51E4480049B347 /* SymphonyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymphonyUITests.swift; sourceTree = "<group>"; };
 		69D209BA1C51E4480049B347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D209C61C51E7090049B347 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				69D209981C51E4480049B347 /* AppDelegate.swift */,
 				69D2099A1C51E4480049B347 /* ViewController.swift */,
+				69D209C61C51E7090049B347 /* DetailsViewController.swift */,
 				69D2099C1C51E4480049B347 /* Main.storyboard */,
 				69D2099F1C51E4480049B347 /* Assets.xcassets */,
 				69D209A11C51E4480049B347 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				69D2099B1C51E4480049B347 /* ViewController.swift in Sources */,
 				69D209991C51E4480049B347 /* AppDelegate.swift in Sources */,
+				69D209C71C51E7090049B347 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

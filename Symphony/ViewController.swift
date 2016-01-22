@@ -16,6 +16,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ToDetailsVC" {
+            
+            let detailsVC = DetailsViewController()
+            
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -31,8 +41,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "Hello"
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.performSegueWithIdentifier("ToDetailsVC", sender: nil)
+        }
     }
 }
 
