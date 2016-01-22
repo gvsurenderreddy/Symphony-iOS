@@ -21,6 +21,7 @@
 		69D209D01C51F1EA0049B347 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209CF1C51F1EA0049B347 /* ReviewsViewController.swift */; };
 		69D209D31C51F3750049B347 /* Symphony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209D21C51F3750049B347 /* Symphony.swift */; };
 		69D209D51C5216D60049B347 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209D41C5216D60049B347 /* AddReviewViewController.swift */; };
+		69D209D91C52289C0049B347 /* EventAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D209D81C52289C0049B347 /* EventAPIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		69D209CF1C51F1EA0049B347 /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		69D209D21C51F3750049B347 /* Symphony.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symphony.swift; sourceTree = "<group>"; };
 		69D209D41C5216D60049B347 /* AddReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		69D209D81C52289C0049B347 /* EventAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				69D209981C51E4480049B347 /* AppDelegate.swift */,
+				69D209D81C52289C0049B347 /* EventAPIController.swift */,
 				69D209D21C51F3750049B347 /* Symphony.swift */,
 				69D209D11C51F1EF0049B347 /* View Controller */,
 				69D209CE1C51EBB60049B347 /* Detail Table View Cells */,
@@ -298,6 +301,7 @@
 				69D209CB1C51EBA80049B347 /* SecondDetailTableViewCell.swift in Sources */,
 				69D209D51C5216D60049B347 /* AddReviewViewController.swift in Sources */,
 				69D2099B1C51E4480049B347 /* ViewController.swift in Sources */,
+				69D209D91C52289C0049B347 /* EventAPIController.swift in Sources */,
 				69D209991C51E4480049B347 /* AppDelegate.swift in Sources */,
 				69D209D01C51F1EA0049B347 /* ReviewsViewController.swift in Sources */,
 				69D209C71C51E7090049B347 /* DetailsViewController.swift in Sources */,
